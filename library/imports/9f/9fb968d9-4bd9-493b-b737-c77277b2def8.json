@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "柜子",
+    "texture": "2e19a974-f83c-420c-8e8b-52ce6f4e8eb9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1595,
+      695
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1595,
+      695
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

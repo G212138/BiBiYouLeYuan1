@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "放置框",
+    "texture": "1d7b1e98-d2bd-4bf7-84c8-adb55a9eea04",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1244,
+      219
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1244,
+      219
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

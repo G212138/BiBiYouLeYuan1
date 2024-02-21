@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "红圈",
+    "texture": "aefd387d-79e8-4ee9-bbb4-1a85c0711d7a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      85,
+      84
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      85,
+      84
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

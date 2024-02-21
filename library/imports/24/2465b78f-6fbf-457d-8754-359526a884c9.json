@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "算数区",
+    "texture": "08a93e80-8a2d-4523-9372-a6cc81dc62cd",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      900,
+      255
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      900,
+      255
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

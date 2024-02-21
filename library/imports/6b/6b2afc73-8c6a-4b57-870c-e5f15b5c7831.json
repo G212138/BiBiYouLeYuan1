@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "第四题_白色描边",
+    "texture": "dd16fae0-f6a1-46e2-a447-bd6c762db806",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1223,
+      194
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1223,
+      194
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

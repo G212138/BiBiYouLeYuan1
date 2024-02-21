@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "91740dd0-a2a2-45b3-a128-697af443e4ee",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 6400,
+  "height": 895,
+  "platformSettings": {},
+  "subMetas": {
+    "第三题_白色描边": {
+      "ver": "1.0.4",
+      "uuid": "333d5b92-0f0d-447e-9e3f-90a806177243",
+      "rawTextureUuid": "91740dd0-a2a2-45b3-a128-697af443e4ee",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1522,
+      "height": 198,
+      "rawWidth": 1522,
+      "rawHeight": 198,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "方框",
+    "texture": "c1a75fd5-a53e-4b30-94f6-43d363a3f318",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      227,
+      211
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      227,
+      211
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

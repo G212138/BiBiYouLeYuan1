@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "第三题_白色描边",
+    "texture": "91740dd0-a2a2-45b3-a128-697af443e4ee",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1522,
+      198
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1522,
+      198
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

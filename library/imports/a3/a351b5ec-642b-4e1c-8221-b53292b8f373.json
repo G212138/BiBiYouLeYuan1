@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "熊",
+    "texture": "66e7a8e0-db60-462c-a2be-b891458c36b3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      130,
+      157
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      130,
+      157
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

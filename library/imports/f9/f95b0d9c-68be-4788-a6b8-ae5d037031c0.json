@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "红线",
+    "texture": "fa240088-dd32-42e6-a843-633fff81e31e",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      8,
+      536
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      8,
+      536
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

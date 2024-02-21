@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "女孩左3",
+    "texture": "6e846c9f-4c97-4612-b6d8-56f70af658f3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      191,
+      338
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      191,
+      338
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

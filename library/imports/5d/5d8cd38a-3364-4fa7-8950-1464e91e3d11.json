@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "下小人",
+    "texture": "40c692b6-fc96-47f0-93c3-d0b43e3c381e",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      181,
+      332
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      181,
+      332
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
