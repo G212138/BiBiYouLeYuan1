@@ -18,6 +18,7 @@ var EventType;
     EventType["SUBMIT"] = "SUBMIT";
     EventType["GAME_REPLAY"] = "GAME_REPLAY";
     EventType["DRAG_OPTION"] = "DRAG_OPTION";
+    EventType["DRAG_OPTION_START"] = "DRAG_OPTION_START";
     EventType["DRAG_OPTION_END"] = "DRAG_OPTION_END";
 })(EventType = exports.EventType || (exports.EventType = {}));
 

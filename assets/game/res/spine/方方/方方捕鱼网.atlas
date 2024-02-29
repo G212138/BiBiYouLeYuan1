@@ -1,0 +1,223 @@
+
+方方捕鱼网.png
+size: 711,1031
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+YA
+  rotate: true
+  xy: 669, 560
+  size: 80, 29
+  orig: 80, 29
+  offset: 0, 0
+  index: -1
+army
+  rotate: true
+  xy: 496, 750
+  size: 138, 213
+  orig: 138, 213
+  offset: 0, 0
+  index: -1
+armz
+  rotate: true
+  xy: 496, 890
+  size: 139, 213
+  orig: 139, 213
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 2, 538
+  size: 491, 492
+  orig: 491, 492
+  offset: 0, 0
+  index: -1
+d
+  rotate: true
+  xy: 666, 191
+  size: 344, 43
+  orig: 350, 48
+  offset: 3, 1
+  index: -1
+diany
+  rotate: false
+  xy: 589, 6
+  size: 43, 44
+  orig: 45, 46
+  offset: 1, 1
+  index: -1
+dianz
+  rotate: false
+  xy: 106, 83
+  size: 43, 44
+  orig: 45, 46
+  offset: 1, 1
+  index: -1
+footy
+  rotate: false
+  xy: 69, 3
+  size: 112, 70
+  orig: 112, 70
+  offset: 0, 0
+  index: -1
+footz
+  rotate: true
+  xy: 495, 294
+  size: 113, 70
+  orig: 113, 70
+  offset: 0, 0
+  index: -1
+gaoguangy
+  rotate: false
+  xy: 649, 285
+  size: 15, 17
+  orig: 17, 19
+  offset: 1, 1
+  index: -1
+gaoguangz
+  rotate: false
+  xy: 666, 541
+  size: 17, 17
+  orig: 19, 19
+  offset: 1, 1
+  index: -1
+hand
+  rotate: false
+  xy: 495, 227
+  size: 67, 65
+  orig: 67, 65
+  offset: 0, 0
+  index: -1
+handyz
+  rotate: true
+  xy: 2, 2
+  size: 67, 65
+  orig: 67, 65
+  offset: 0, 0
+  index: -1
+hongy
+  rotate: true
+  xy: 496, 578
+  size: 170, 171
+  orig: 173, 174
+  offset: 1, 2
+  index: -1
+hongz
+  rotate: true
+  xy: 496, 409
+  size: 167, 168
+  orig: 172, 170
+  offset: 3, 1
+  index: -1
+legy
+  rotate: false
+  xy: 434, 181
+  size: 59, 355
+  orig: 59, 355
+  offset: 0, 0
+  index: -1
+legz
+  rotate: false
+  xy: 589, 52
+  size: 58, 355
+  orig: 58, 355
+  offset: 0, 0
+  index: -1
+muzhi
+  rotate: false
+  xy: 151, 82
+  size: 42, 45
+  orig: 44, 46
+  offset: 1, 1
+  index: -1
+nose
+  rotate: false
+  xy: 495, 192
+  size: 42, 33
+  orig: 44, 35
+  offset: 1, 1
+  index: -1
+shetou
+  rotate: true
+  xy: 649, 61
+  size: 128, 60
+  orig: 128, 60
+  offset: 0, 0
+  index: -1
+tongkongy
+  rotate: false
+  xy: 2, 75
+  size: 50, 52
+  orig: 52, 54
+  offset: 1, 1
+  index: -1
+tongkongz
+  rotate: false
+  xy: 54, 75
+  size: 50, 52
+  orig: 52, 54
+  offset: 1, 1
+  index: -1
+tq
+  rotate: false
+  xy: 649, 4
+  size: 59, 55
+  orig: 59, 55
+  offset: 0, 0
+  index: -1
+yanbaiy
+  rotate: true
+  xy: 195, 16
+  size: 111, 107
+  orig: 119, 114
+  offset: 4, 3
+  index: -1
+yanbaiz
+  rotate: true
+  xy: 304, 16
+  size: 111, 107
+  orig: 119, 114
+  offset: 4, 3
+  index: -1
+yby
+  rotate: true
+  xy: 700, 537
+  size: 103, 7
+  orig: 103, 7
+  offset: 0, 0
+  index: -1
+ypy
+  rotate: true
+  xy: 434, 71
+  size: 108, 56
+  orig: 117, 90
+  offset: 4, 16
+  index: -1
+ypyx
+  rotate: true
+  xy: 669, 642
+  size: 106, 34
+  orig: 115, 36
+  offset: 3, 2
+  index: -1
+yuwang
+  rotate: true
+  xy: 2, 129
+  size: 407, 430
+  orig: 407, 430
+  offset: 0, 0
+  index: -1
+zby
+  rotate: true
+  xy: 649, 304
+  size: 103, 7
+  orig: 103, 7
+  offset: 0, 0
+  index: -1
+zui
+  rotate: true
+  xy: 495, 24
+  size: 165, 92
+  orig: 165, 92
+  offset: 0, 0
+  index: -1

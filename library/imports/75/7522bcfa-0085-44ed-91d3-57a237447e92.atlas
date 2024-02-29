@@ -1,0 +1,125 @@
+
+尖尖捕鱼网.png
+size: 801,298
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+SHETOU
+  rotate: false
+  xy: 670, 176
+  size: 48, 28
+  orig: 49, 28
+  offset: 1, 0
+  index: -1
+YA
+  rotate: false
+  xy: 307, 7
+  size: 22, 13
+  orig: 23, 13
+  offset: 1, 0
+  index: -1
+body
+  rotate: true
+  xy: 2, 2
+  size: 294, 263
+  orig: 294, 263
+  offset: 0, 0
+  index: -1
+d
+  rotate: true
+  xy: 567, 115
+  size: 181, 25
+  orig: 185, 31
+  offset: 2, 3
+  index: -1
+gaoguang
+  rotate: false
+  xy: 267, 2
+  size: 18, 18
+  orig: 20, 20
+  offset: 1, 1
+  index: -1
+szt
+  rotate: false
+  xy: 287, 2
+  size: 18, 18
+  orig: 20, 20
+  offset: 1, 1
+  index: -1
+tq
+  rotate: false
+  xy: 594, 115
+  size: 59, 55
+  orig: 59, 55
+  offset: 0, 0
+  index: -1
+tui_l
+  rotate: true
+  xy: 655, 119
+  size: 51, 90
+  orig: 51, 90
+  offset: 0, 0
+  index: -1
+tui_r
+  rotate: false
+  xy: 670, 206
+  size: 50, 90
+  orig: 50, 90
+  offset: 0, 0
+  index: -1
+yanbai
+  rotate: true
+  xy: 684, 8
+  size: 109, 105
+  orig: 117, 113
+  offset: 4, 5
+  index: -1
+yanzhu
+  rotate: false
+  xy: 722, 238
+  size: 50, 58
+  orig: 52, 60
+  offset: 1, 1
+  index: -1
+yp
+  rotate: false
+  xy: 567, 2
+  size: 115, 111
+  orig: 115, 111
+  offset: 0, 0
+  index: -1
+ys
+  rotate: true
+  xy: 594, 172
+  size: 124, 74
+  orig: 124, 75
+  offset: 0, 0
+  index: -1
+yuany
+  rotate: true
+  xy: 765, 201
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: -1
+yuanz
+  rotate: false
+  xy: 747, 149
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+yw
+  rotate: true
+  xy: 267, 22
+  size: 274, 298
+  orig: 274, 298
+  offset: 0, 0
+  index: -1
+zui
+  rotate: true
+  xy: 722, 186
+  size: 50, 41
+  orig: 50, 41
+  offset: 0, 0
+  index: -1

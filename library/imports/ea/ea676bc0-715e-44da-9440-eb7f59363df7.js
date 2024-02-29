@@ -25,7 +25,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManager");
 var SoundManager_1 = require("../../../../frame/scripts/Manager/SoundManager");
+var SyncDataManager_1 = require("../../../../frame/scripts/Manager/SyncDataManager");
 var HitTest_1 = require("../../../../frame/scripts/Utils/HitTest");
+var Tools_1 = require("../../../../frame/scripts/Utils/Tools");
 var EventType_1 = require("../../Data/EventType");
 var EditorManager_1 = require("../../Manager/EditorManager");
 var SoundConfig_1 = require("./SoundConfig");
@@ -35,6 +37,7 @@ var FillArea = /** @class */ (function (_super) {
     function FillArea() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.highlight = null;
+        _this.index = 0;
         return _this;
     }
     FillArea.prototype.onLoad = function () {
@@ -46,6 +49,14 @@ var FillArea = /** @class */ (function (_super) {
     FillArea.prototype.onDragOption = function (pos) {
         if (!this.highlight)
             return;
+        if (EditorManager_1.EditorManager.editorData.gameIndex == 3) {
+            if (SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.step == 0 && this.index == 1) {
+                return;
+            }
+            else if (SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.step == 1 && this.index == 0) {
+                return;
+            }
+        }
         if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.node)) {
             this.highlight.active = true;
             this.highlight.color = new cc.Color(247, 255, 29);
@@ -69,10 +80,16 @@ var FillArea = /** @class */ (function (_super) {
             item.y = 0;
         }
         SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["放置音效"], false, false, false);
+        if (EditorManager_1.EditorManager.editorData.gameIndex == 3) {
+            Tools_1.Tools.playSpine(item.getChildByName("icon").getChildByName("hp_coin2").getComponent(sp.Skeleton), "animation2", false);
+        }
     };
     __decorate([
         property(cc.Node)
     ], FillArea.prototype, "highlight", void 0);
+    __decorate([
+        property(cc.Integer)
+    ], FillArea.prototype, "index", void 0);
     FillArea = __decorate([
         ccclass
     ], FillArea);

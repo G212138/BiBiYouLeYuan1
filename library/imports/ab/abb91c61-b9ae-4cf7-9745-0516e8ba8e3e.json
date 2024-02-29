@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "方方捕鱼网",
+    "texture": "18cf6a4b-81ab-4f23-837d-b0bd975f47dd",
+    "atlas": "",
+    "rect": [
+      2,
+      3,
+      707,
+      1025
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      711,
+      1031
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

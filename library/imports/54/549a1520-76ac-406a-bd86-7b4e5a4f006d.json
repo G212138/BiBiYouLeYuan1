@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "咕噜",
+    "texture": "c8688011-9597-48ff-911a-a5bb99919308",
+    "atlas": "",
+    "rect": [
+      2,
+      2,
+      789,
+      295
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      794,
+      299
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

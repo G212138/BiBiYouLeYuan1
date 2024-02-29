@@ -112,6 +112,10 @@ export default class GamePanel extends BaseGamePanel {
         SyncDataManager.getSyncData().customSyncData.isShowCircle = false;
         SyncDataManager.getSyncData().customSyncData.fillAreaOptions = [];
         SyncDataManager.getSyncData().customSyncData.fillAreaOptions2 = [];
+        SyncDataManager.getSyncData().customSyncData.isShowNum = false;
+        SyncDataManager.getSyncData().customSyncData.isShowXuxian = [];
+        SyncDataManager.getSyncData().customSyncData.isShowXuxian2 = [];
+        SyncDataManager.getSyncData().customSyncData.step = 0;
         for (let i = 0; i < this.gameLevel.length; i++) {
             this.gameLevel[i].active = false;
         }

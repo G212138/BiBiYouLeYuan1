@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "benzi-1",
+    "texture": "b34968e6-51d0-4563-af11-f551608ee38c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      202,
+      187
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      202,
+      187
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

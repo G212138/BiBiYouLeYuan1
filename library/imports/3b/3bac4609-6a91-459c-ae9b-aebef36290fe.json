@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "下小人投影",
+    "texture": "50290e1c-e6cb-4b32-a7a5-7a82e8af5a48",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      164,
+      54
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      164,
+      54
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

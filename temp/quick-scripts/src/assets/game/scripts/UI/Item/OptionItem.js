@@ -24,6 +24,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManager");
+var SyncDataManager_1 = require("../../../../frame/scripts/Manager/SyncDataManager");
 var HitTest_1 = require("../../../../frame/scripts/Utils/HitTest");
 var EventType_1 = require("../../Data/EventType");
 var EditorManager_1 = require("../../Manager/EditorManager");
@@ -36,10 +37,12 @@ var OptionItem = /** @class */ (function (_super) {
         _this.optionParent = null;
         _this.fillArea = null;
         _this.fillArea2 = null;
+        _this.isShowXuxian = false;
         return _this;
     }
     OptionItem.prototype.onDragStart = function (event) {
         var pos = event.target.parent.convertToWorldSpaceAR(cc.v2(event.pos.x, event.pos.y));
+        ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.DRAG_OPTION_START, pos);
     };
     OptionItem.prototype.onDragMove = function (event) {
         var pos = event.target.parent.convertToWorldSpaceAR(cc.v2(event.pos.x, event.pos.y));
@@ -47,30 +50,67 @@ var OptionItem = /** @class */ (function (_super) {
     };
     OptionItem.prototype.onDragEnd = function (event) {
         var pos = event.target.parent.convertToWorldSpaceAR(cc.v2(event.pos.x, event.pos.y));
-        if (EditorManager_1.EditorManager.editorData.gameIndex == 3) {
+        if (EditorManager_1.EditorManager.editorData.gameIndex == 2) {
+            if (event.isClick) {
+                if (this.node.parent != this.optionParent) {
+                    this.isShowXuxian = !this.isShowXuxian;
+                }
+            }
+            else {
+                if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.fillArea)) {
+                    this.fillArea.getComponent(FillArea_1.default).fill(this.node);
+                }
+                else {
+                    this.reset();
+                }
+            }
+        }
+        else if (EditorManager_1.EditorManager.editorData.gameIndex == 3) {
+            if (SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.step == 0) {
+                if (event.isClick) {
+                    if (this.node.parent != this.optionParent) {
+                        this.isShowXuxian = !this.isShowXuxian;
+                    }
+                }
+                else {
+                    if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.fillArea)) {
+                        this.fillArea.getComponent(FillArea_1.default).fill(this.node);
+                    }
+                    else {
+                        this.reset();
+                    }
+                }
+            }
+            else {
+                if (event.isClick) {
+                    if (this.node.parent != this.optionParent) {
+                        this.isShowXuxian = !this.isShowXuxian;
+                    }
+                }
+                else {
+                    if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.fillArea2)) {
+                        this.fillArea2.getComponent(FillArea_1.default).fill(this.node);
+                    }
+                    else {
+                        this.reset();
+                    }
+                }
+            }
+        }
+        else {
             if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.fillArea)) {
                 this.fillArea.getComponent(FillArea_1.default).fill(this.node);
-            }
-            else if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.fillArea2)) {
-                this.fillArea2.getComponent(FillArea_1.default).fill(this.node);
             }
             else {
                 this.reset();
             }
-            ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.DRAG_OPTION_END);
-            return;
-        }
-        if (HitTest_1.HitTest.posInRect(new cc.Vec2(pos.x, pos.y), this.fillArea)) {
-            this.fillArea.getComponent(FillArea_1.default).fill(this.node);
-        }
-        else {
-            this.reset();
         }
         ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.DRAG_OPTION_END);
     };
     OptionItem.prototype.reset = function () {
         this.node.parent = this.optionParent;
         this.node.position = cc.v3(0, 0);
+        this.isShowXuxian = false;
     };
     __decorate([
         property(cc.Node)

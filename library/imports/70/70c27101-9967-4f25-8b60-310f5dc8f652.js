@@ -92,6 +92,12 @@ var TeacherPanel = /** @class */ (function (_super) {
     };
     // 保存课件按钮
     TeacherPanel.prototype.onBtnSaveClicked = function () {
+        if (EditorManager_1.EditorManager.editorData.gameIndex == 3) {
+            EditorManager_1.EditorManager.editorData.levelCount = 2;
+        }
+        else {
+            EditorManager_1.EditorManager.editorData.levelCount = 1;
+        }
         // const isEdit = EditorManager.isSupportEdit();
         // if (!isEdit || ReportManager.isAllOver) {
         UIHelp_1.UIHelp.showSubmissionPanel();
@@ -101,6 +107,12 @@ var TeacherPanel = /** @class */ (function (_super) {
     };
     // 预览课件按钮
     TeacherPanel.prototype.onBtnViewClicked = function () {
+        if (EditorManager_1.EditorManager.editorData.gameIndex == 3) {
+            EditorManager_1.EditorManager.editorData.levelCount = 2;
+        }
+        else {
+            EditorManager_1.EditorManager.editorData.levelCount = 1;
+        }
         if (-1 === EditorManager_1.EditorManager.getCoursewareLevel() ||
             null === EditorManager_1.EditorManager.getCoursewareLevel() ||
             void 0 === EditorManager_1.EditorManager.getCoursewareLevel()) {

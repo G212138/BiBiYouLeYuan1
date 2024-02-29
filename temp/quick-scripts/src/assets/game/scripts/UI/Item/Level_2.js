@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManager");
 var SoundManager_1 = require("../../../../frame/scripts/Manager/SoundManager");
 var SyncDataManager_1 = require("../../../../frame/scripts/Manager/SyncDataManager");
+var Tools_1 = require("../../../../frame/scripts/Utils/Tools");
 var EventType_1 = require("../../Data/EventType");
 var EditorManager_1 = require("../../Manager/EditorManager");
 var FillArea_1 = require("./FillArea");
@@ -39,34 +40,48 @@ var Level_2 = /** @class */ (function (_super) {
         _this.redLine = null;
         _this.numNode = null;
         _this.optionsNode = null;
+        _this.qizi = null;
         _this.btn_change = null;
+        _this.btn_submit = null;
         _this.diyidui = null;
         _this.dierdui = null;
         _this.highlight = null;
+        _this.endSpine = null;
         _this.isCheckEnd = false;
         return _this;
     }
     Level_2.prototype.onLoad = function () {
         ListenerManager_1.ListenerManager.on(EventType_1.EventType.ENTER_GAME, this.init, this);
         ListenerManager_1.ListenerManager.on(EventType_1.EventType.DRAG_OPTION_END, this.syncOptions, this);
+        ListenerManager_1.ListenerManager.on(EventType_1.EventType.DRAG_OPTION_START, this.updateOptions, this);
     };
     Level_2.prototype.onDestroy = function () {
         ListenerManager_1.ListenerManager.off(EventType_1.EventType.ENTER_GAME, this.init, this);
         ListenerManager_1.ListenerManager.off(EventType_1.EventType.DRAG_OPTION_END, this.syncOptions, this);
+        ListenerManager_1.ListenerManager.off(EventType_1.EventType.DRAG_OPTION_START, this.updateOptions, this);
     };
     Level_2.prototype.init = function () {
+        var _this = this;
+        this.isCheckEnd = false;
+        this.endSpine.node.active = false;
         this.numNode.active = EditorManager_1.EditorManager.editorData.gameMode == 0; //演示模式
         this.btn_change.active = EditorManager_1.EditorManager.editorData.gameMode == 0; //演示模式
+        this.btn_submit.active = EditorManager_1.EditorManager.editorData.gameMode == 1; //演示模式不要提交按钮
         if (EditorManager_1.EditorManager.editorData.gameMode == 0) {
-            this.optionsNode.x = -520;
+            this.optionsNode.x = -480;
+            this.qizi.x = -480 - 140;
         }
         else {
             this.optionsNode.x = 0;
+            this.qizi.x = 0 - 140;
         }
-        this.handleShowCircle();
         this.handleShowRedLine();
         this.handleShowNum();
         this.resetOptions();
+        this.updateOptions();
+        this.scheduleOnce(function () {
+            _this.handleShowCircle();
+        }, 0.1);
     };
     Level_2.prototype.resetOptions = function () {
         var fillAreaOptions = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.fillAreaOptions;
@@ -87,26 +102,68 @@ var Level_2 = /** @class */ (function (_super) {
         for (var i = 0; i < this.diyidui.childrenCount; i++) {
             SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.fillAreaOptions.push(this.diyidui.children[i].name);
         }
+        this.updateOptions();
     };
-    Level_2.prototype.handleShowCircle = function () {
-        var isShowCircle = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowCircle;
+    Level_2.prototype.updateOptions = function () {
         for (var i = 0; i < this.optionsNode.childrenCount; i++) {
-            this.optionsNode.children[i].getChildByName("circle").active = isShowCircle;
-            this.optionsNode.children[i].getChildByName("icon").active = !isShowCircle;
+            this.optionsNode.children[i].getChildByName("heibai").active = false;
+            this.optionsNode.children[i].active = false;
+            this.optionsNode.children[this.optionsNode.childrenCount - 1].active = true;
         }
+    };
+    Level_2.prototype.handleShowCircle = function (needAnim) {
+        var _this = this;
+        if (needAnim === void 0) { needAnim = false; }
+        var isShowCircle = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowCircle;
+        var _loop_1 = function (i) {
+            if (needAnim) {
+                this_1.optionsNode.children[i].getChildByName("heibai").active = true;
+                this_1.optionsNode.children[i].getChildByName("heibai").getComponent(sp.Skeleton).timeScale = 2;
+                Tools_1.Tools.playSpine(this_1.optionsNode.children[i].getChildByName("heibai").getComponent(sp.Skeleton), "eft_smoke", false, function () {
+                    _this.optionsNode.children[i].getChildByName("heibai").active = false;
+                });
+            }
+            else {
+                this_1.optionsNode.children[i].getChildByName("heibai").active = false;
+            }
+            this_1.scheduleOnce(function () {
+                _this.optionsNode.children[i].getChildByName("circle").active = isShowCircle;
+                _this.optionsNode.children[i].getChildByName("icon").active = !isShowCircle;
+            }, 0.5 * (needAnim ? 1 : 0));
+        };
+        var this_1 = this;
+        for (var i = 0; i < this.optionsNode.childrenCount; i++) {
+            _loop_1(i);
+        }
+        var _loop_2 = function (i) {
+            if (needAnim) {
+                this_2.diyidui.children[i].getChildByName("heibai").active = true;
+                this_2.diyidui.children[i].getChildByName("heibai").getComponent(sp.Skeleton).timeScale = 2;
+                Tools_1.Tools.playSpine(this_2.diyidui.children[i].getChildByName("heibai").getComponent(sp.Skeleton), "eft_smoke", false, function () {
+                    _this.diyidui.children[i].getChildByName("heibai").active = false;
+                });
+            }
+            else {
+                this_2.diyidui.children[i].getChildByName("heibai").active = false;
+            }
+            this_2.scheduleOnce(function () {
+                _this.diyidui.children[i].getChildByName("circle").active = isShowCircle;
+                _this.diyidui.children[i].getChildByName("icon").active = !isShowCircle;
+            }, 0.5 * (needAnim ? 1 : 0));
+        };
+        var this_2 = this;
         for (var i = 0; i < this.diyidui.childrenCount; i++) {
-            this.diyidui.children[i].getChildByName("circle").active = isShowCircle;
-            this.diyidui.children[i].getChildByName("icon").active = !isShowCircle;
+            _loop_2(i);
         }
         for (var i = 0; i < this.dierdui.childrenCount; i++) {
-            this.dierdui.children[i].getChildByName("circle").active = isShowCircle;
-            this.dierdui.children[i].getChildByName("icon").active = !isShowCircle;
+            this.dierdui.children[i].getChildByName("circle").active = false;
+            this.dierdui.children[i].getChildByName("icon").active = true;
         }
     };
     Level_2.prototype.onClickShowRedLine = function () {
         SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["点击音效"], false, false, false);
         var isShow = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowLine;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowLine = !isShow;
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowLine = true;
         this.handleShowRedLine();
     };
     Level_2.prototype.handleShowRedLine = function () {
@@ -114,30 +171,35 @@ var Level_2 = /** @class */ (function (_super) {
     };
     Level_2.prototype.onClickNum = function () {
         SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["点击音效"], false, false, false);
-        var showNumCount = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.showNumCount;
-        showNumCount++;
-        if (showNumCount > 5) {
-            showNumCount = 0;
-        }
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.showNumCount = showNumCount;
+        // let showNumCount = SyncDataManager.getSyncData().customSyncData.showNumCount;
+        // showNumCount++;
+        // if (showNumCount > 5) {
+        //     showNumCount = 0;
+        // }
+        // SyncDataManager.getSyncData().customSyncData.showNumCount = showNumCount;
+        var isShowNum = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowNum;
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowNum = !isShowNum;
         this.handleShowNum();
     };
     Level_2.prototype.handleShowNum = function () {
         var showNumCount = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.showNumCount;
+        var isShowNum = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowNum;
         this.numNode.children.forEach(function (node, index) {
-            node.active = index < showNumCount;
+            // node.active = index < showNumCount;
+            node.active = isShowNum;
         });
     };
     Level_2.prototype.onClickChange = function () {
         SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["点击音效"], false, false, false);
         var isShowCircle = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowCircle;
         SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowCircle = !isShowCircle;
-        this.handleShowCircle();
+        this.handleShowCircle(true);
     };
     Level_2.prototype.onClickCheck = function () {
-        SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["点击音效"], false, false, false);
         if (this.isCheckEnd)
             return;
+        SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["点击音效"], false, false, false);
+        cc.tween(this.btn_submit).to(0.1, { scale: 1.1 }).to(0.1, { scale: 1 }).start();
         if (this.diyidui.childrenCount == 10) {
             this.handleTrue();
         }
@@ -149,6 +211,14 @@ var Level_2 = /** @class */ (function (_super) {
         this.isCheckEnd = true;
         SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["正确音效"], false, false, false);
         ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.SUBMIT, true);
+        this.endSpine.node.active = true;
+        SoundManager_1.SoundManager.playEffect(SoundConfig_1.SoundConfig.soudlist["比比侦探你最棒。"], false, false, false, function () {
+            if (EditorManager_1.EditorManager.editorData.gameMode == 1) {
+                ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.GAME_OVER);
+            }
+        });
+        Tools_1.Tools.playSpine(this.endSpine, "1", false, function () {
+        });
         // this.highlight.active = true;
         // this.highlight.color = cc.Color.GREEN;
         // cc.tween(this.highlight).to(0.1, { opacity: 255 }).delay(0.3).to(0.1, {opacity: 0 })
@@ -156,9 +226,9 @@ var Level_2 = /** @class */ (function (_super) {
         // .to(0.1, { opacity: 255 }).delay(0.3).to(0.1, {opacity: 0 })
         // .call(() => {
         //     this.highlight.active = false;
-        if (EditorManager_1.EditorManager.editorData.gameMode == 1) {
-            ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.GAME_OVER);
-        }
+        // if (EditorManager.editorData.gameMode == 1) {
+        //     ListenerManager.dispatch(EventType.GAME_OVER);
+        // }
         // })
         // .start();                      
     };
@@ -186,7 +256,13 @@ var Level_2 = /** @class */ (function (_super) {
     ], Level_2.prototype, "optionsNode", void 0);
     __decorate([
         property(cc.Node)
+    ], Level_2.prototype, "qizi", void 0);
+    __decorate([
+        property(cc.Node)
     ], Level_2.prototype, "btn_change", void 0);
+    __decorate([
+        property(cc.Node)
+    ], Level_2.prototype, "btn_submit", void 0);
     __decorate([
         property(cc.Node)
     ], Level_2.prototype, "diyidui", void 0);
@@ -196,6 +272,9 @@ var Level_2 = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], Level_2.prototype, "highlight", void 0);
+    __decorate([
+        property(sp.Skeleton)
+    ], Level_2.prototype, "endSpine", void 0);
     Level_2 = __decorate([
         ccclass
     ], Level_2);

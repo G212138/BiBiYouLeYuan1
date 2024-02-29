@@ -12,4 +12,8 @@ export class CustomSyncData {
     public isShowCircle: boolean = false;
     public fillAreaOptions: string[] = [];
     public fillAreaOptions2: string[] = [];
+    public isShowNum: boolean = false;
+    public isShowXuxian: boolean[] = [];
+    public isShowXuxian2: boolean[] = [];
+    public step: number = 0;
 }

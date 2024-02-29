@@ -84,6 +84,11 @@ export default class TeacherPanel extends BaseTeacherPanel {
 
     // 保存课件按钮
     public onBtnSaveClicked() {
+        if (EditorManager.editorData.gameIndex == 3) {
+            EditorManager.editorData.levelCount = 2;
+        } else {
+            EditorManager.editorData.levelCount = 1;
+        }
         // const isEdit = EditorManager.isSupportEdit();
         // if (!isEdit || ReportManager.isAllOver) {
             UIHelp.showSubmissionPanel();
@@ -93,7 +98,11 @@ export default class TeacherPanel extends BaseTeacherPanel {
     }
     // 预览课件按钮
     public onBtnViewClicked() {
-        
+        if (EditorManager.editorData.gameIndex == 3) {
+            EditorManager.editorData.levelCount = 2;
+        } else {
+            EditorManager.editorData.levelCount = 1;
+        }
         if (
             -1 === EditorManager.getCoursewareLevel() ||
             null === EditorManager.getCoursewareLevel() ||

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "18cf6a4b-81ab-4f23-837d-b0bd975f47dd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 711,
+  "height": 1031,
+  "platformSettings": {},
+  "subMetas": {
+    "方方捕鱼网": {
+      "ver": "1.0.4",
+      "uuid": "abb91c61-b9ae-4cf7-9745-0516e8ba8e3e",
+      "rawTextureUuid": "18cf6a4b-81ab-4f23-837d-b0bd975f47dd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 3,
+      "width": 707,
+      "height": 1025,
+      "rawWidth": 711,
+      "rawHeight": 1031,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

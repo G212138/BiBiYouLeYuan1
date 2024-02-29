@@ -19,6 +19,10 @@ var CustomSyncData = /** @class */ (function () {
         this.isShowCircle = false;
         this.fillAreaOptions = [];
         this.fillAreaOptions2 = [];
+        this.isShowNum = false;
+        this.isShowXuxian = [];
+        this.isShowXuxian2 = [];
+        this.step = 0;
     }
     return CustomSyncData;
 }());

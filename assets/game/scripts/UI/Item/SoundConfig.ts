@@ -5,6 +5,7 @@ export class SoundConfig {
         "点击音效": "click_bubble1",
         "正确音效": "right_metal",
         "错误音效": "wrong_bass",
+        "比比侦探你最棒。": "比比侦探你最棒。"
     }
 
 }

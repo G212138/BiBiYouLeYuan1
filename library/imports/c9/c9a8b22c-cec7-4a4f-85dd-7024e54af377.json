@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "小熊虚线",
+    "texture": "6a09e2d9-3c28-4003-ad5d-b653e62e35c7",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      100,
+      128
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      100,
+      128
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

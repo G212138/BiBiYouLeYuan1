@@ -125,6 +125,10 @@ var GamePanel = /** @class */ (function (_super) {
         SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowCircle = false;
         SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.fillAreaOptions = [];
         SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.fillAreaOptions2 = [];
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowNum = false;
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowXuxian = [];
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.isShowXuxian2 = [];
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.step = 0;
         for (var i = 0; i < this.gameLevel.length; i++) {
             this.gameLevel[i].active = false;
         }

@@ -1,0 +1,62 @@
+
+yu.png
+size: 71,194
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sy
+  rotate: false
+  xy: 2, 2
+  size: 65, 118
+  orig: 65, 118
+  offset: 0, 0
+  index: -1
+yb
+  rotate: false
+  xy: 46, 151
+  size: 23, 23
+  orig: 25, 25
+  offset: 1, 1
+  index: -1
+yh
+  rotate: false
+  xy: 2, 158
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+yq1
+  rotate: true
+  xy: 18, 178
+  size: 14, 21
+  orig: 15, 21
+  offset: 0, 0
+  index: -1
+yq2
+  rotate: true
+  xy: 41, 176
+  size: 16, 22
+  orig: 18, 24
+  offset: 1, 1
+  index: -1
+ys
+  rotate: true
+  xy: 22, 153
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1
+yy
+  rotate: true
+  xy: 2, 122
+  size: 27, 48
+  orig: 27, 50
+  offset: 0, 1
+  index: -1
+yz
+  rotate: false
+  xy: 2, 183
+  size: 14, 9
+  orig: 19, 11
+  offset: 3, 1
+  index: -1
